@@ -48,6 +48,8 @@ const saleProduct = async (
     }
     await session.commitTransaction()
     await session.endSession()
+
+    return sale[0]
   } catch (err) {
     await session.abortTransaction()
     await session.endSession()
