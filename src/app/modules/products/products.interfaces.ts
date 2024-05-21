@@ -7,7 +7,7 @@ export type TProduct = {
   branch: string
   sportsType: string
   brand: string
-  size: number
+  size?: number
   material: string
   color: string
   condition: 'new' | 'used'

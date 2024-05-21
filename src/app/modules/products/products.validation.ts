@@ -11,7 +11,9 @@ const productValidationSchema = z.object({
     quantity: z.number({ required_error: 'quantity is required!' }),
     sportsType: z.string({ required_error: 'sports type is required!' }),
     brand: z.string({ required_error: 'brand is required!' }),
-    size: z.number({ invalid_type_error: 'size must be in number!' }),
+    size: z
+      .number({ invalid_type_error: 'size must be in number!' })
+      .optional(),
     material: z.string({ required_error: 'material is required!' }),
     color: z.string({ required_error: 'color is required!' }),
     condition: z.enum(['new', 'used']),

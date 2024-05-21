@@ -28,7 +28,6 @@ const productSchema = new Schema<TProduct>({
   },
   size: {
     type: Number,
-    required: true,
   },
   material: {
     type: String,
